@@ -1,22 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@karmerk 
-645
-2,533 316 dotnet/standard
- Code  Issues 66  Pull requests 4  Projects 0  Insights
-standard/.gitignore
-@terrajobst terrajobst Add tool to automate generation of .NET Core baseline
-a8c5fa2 21 days ago
-@wtgodbe @ViktorHofer @terrajobst @dotnet-bot
-279 lines (220 sloc)  3.29 KB
-    
 syntax: glob
 
 ### .NET Standard specific ###
@@ -295,15 +276,3 @@ Session.vim
 # Private test configuration and binaries.
 config.ps1
 **/IISApplications
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
