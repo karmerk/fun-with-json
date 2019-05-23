@@ -11,10 +11,9 @@ namespace Json.Test
         public void Ctor_String_Test()
         {
             var jsonString = new JsonString("Hello World");
-            var json = jsonString.ToString();
 
             Assert.AreEqual("Hello World", jsonString.Value);
-            Assert.AreEqual("\"Hello World\"", json);
+            Assert.AreEqual("\"Hello World\"", jsonString.Json(new JsonOptions()).ToString());
         }
 
 
@@ -26,14 +25,13 @@ namespace Json.Test
             var jsonString = new JsonString(json);
 
             Assert.AreEqual("Hello World", jsonString.Value);
-            Assert.AreEqual("\"Hello World\"", jsonString.ToString());
+            Assert.AreEqual("\"Hello World\"", jsonString.Json(new JsonOptions()).ToString());
         }
 
         public void JsonStringIsString_Test()
         {
-            var js = new JsonString("\"Hello world\"");
-
-            string value = js;
+            var jsonString = new JsonString("\"Hello world\"");
+            string value = jsonString;
 
             Assert.AreEqual("Hello world", value);
         }
@@ -44,8 +42,8 @@ namespace Json.Test
         {
             const string str = "\"Hello nested JSON: { \\\"value\\\": 42 }\"";
 
-            var js = new JsonString(new Json(str));
-            var value = js.Value;
+            var jsonString = new JsonString(new Json(str));
+            var value = jsonString.Value;
             
             Assert.AreEqual("Hello nested JSON: { \"value\": 42 }", value);
         }

@@ -12,9 +12,10 @@ namespace Json.Test
         [DataRow("FaLsE")]
         public void False_Test(string json)
         {
-            var @false = new JsonFalse(json);
+            var jsonFalse = new JsonFalse(json);
 
-            Assert.AreEqual(false, (bool)@false);
+            Assert.AreEqual(false, (bool)jsonFalse);
+            Assert.AreEqual(false.ToString(), jsonFalse.Json(new JsonOptions()).ToString());
         }
 
         [TestMethod]

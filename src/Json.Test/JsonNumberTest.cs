@@ -19,6 +19,7 @@ namespace Json.Test
 
             Assert.AreEqual(@decimal, jsonNumber.Value);
             Assert.AreEqual(str.TrimEnd().Length, json.Position);
+            Assert.AreEqual(str, jsonNumber.Json(new JsonOptions()).ToString());
         }
 
 

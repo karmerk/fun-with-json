@@ -12,9 +12,10 @@ namespace Json.Test
         [DataRow("TrUe")]
         public void True_Test(string json)
         {
-            var @true = new JsonTrue(json);
+            var jsonTrue = new JsonTrue(json);
 
-            Assert.AreEqual(true, (bool)@true);
+            Assert.AreEqual(true, (bool)jsonTrue);
+            Assert.AreEqual(true.ToString(), jsonTrue.Json(new JsonOptions()).ToString());
         }
 
         [TestMethod]

@@ -15,6 +15,8 @@ namespace Json.Test
         public void Null_Test(string json)
         {
             var jsonNull = new JsonNull(json);
+            
+            Assert.AreEqual("null", jsonNull.Json(new JsonOptions()).ToString());
         }
 
        
