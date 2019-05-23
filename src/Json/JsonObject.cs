@@ -41,39 +41,9 @@ namespace Json
 
             json.Require('}');
         }
-         
+
+        public override string ToString() => Json(null).ToString();
         
-
-        public override string ToString()
-        {
-            var builder = new StringBuilder();
-
-            ToString(builder);
-
-            return builder.ToString();
-        }
-
-        public void ToString(StringBuilder builder)
-        {
-            builder.Append("{");
-            for(int i = 0; i < _values.Count; i++)
-            {
-                var name = _values[i].name;
-                var value = _values[i].value;
-
-                name.ToString(builder);
-                builder.Append(':');
-                value.ToString(builder);
-
-                if (i < _values.Count -1)
-                {
-                    builder.Append(',');
-                }
-            }
-
-            builder.Append("}");
-        }
-
         public Json Json(JsonOptions options)
         {
             var builder = new StringBuilder();

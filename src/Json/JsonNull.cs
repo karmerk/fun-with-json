@@ -16,15 +16,7 @@ namespace Json
             json.Require('l');
         }
 
-        public override string ToString()
-        {
-            return "null";
-        }
-
-        public void ToString(StringBuilder builder)
-        {
-            builder.Append("null");
-        }
+        public override string ToString() => Json(null).ToString();
 
         public Json Json(JsonOptions options)
         {

@@ -19,24 +19,18 @@ namespace Json
             json.Require('e');
         }
 
-        public override string ToString()
+        public Json Json(JsonOptions options)
         {
-            return "true";
+            return true.ToString();
         }
 
-        public void ToString(StringBuilder builder)
-        {
-            builder.Append("true");
-        }
+        public override string ToString() => Json(null).ToString();
 
         public static implicit operator bool(JsonTrue _)
         {
             return true;
         }
 
-        public Json Json(JsonOptions options)
-        {
-            return true.ToString();
-        }
+        
     }
 }

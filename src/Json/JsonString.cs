@@ -75,19 +75,11 @@ namespace Json
             
             json.Require('"');
         }
-               
-
-        public override string ToString()
+        
+        public Json Json(JsonOptions options)
         {
             var builder = new StringBuilder();
 
-            ToString(builder);
-
-            return builder.ToString();
-        }
-
-        public void ToString(StringBuilder builder)
-        {
             // TODO control character is not allowed
 
             builder.Append('\"');
@@ -102,7 +94,11 @@ namespace Json
             }
 
             builder.Append('\"');
+
+            return builder.ToString();
         }
+
+        public override string ToString() => Json(null).ToString();
 
         public static implicit operator string(JsonString value)
         {

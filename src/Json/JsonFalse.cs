@@ -17,15 +17,7 @@ namespace Json
             json.Require('e');
         }
 
-        public override string ToString()
-        {
-            return "false";
-        }
-
-        public void ToString(StringBuilder builder)
-        {
-            builder.Append("false");
-        }
+        public override string ToString() => Json(null).ToString();
 
         public static implicit operator bool(JsonFalse _)
         {

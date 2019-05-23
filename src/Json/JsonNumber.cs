@@ -44,16 +44,8 @@ namespace Json
 
             json.Position = index;
         }
-        
-        public override string ToString()
-        {
-            return Value.ToString(CultureInfo.InvariantCulture);
-        }
 
-        public void ToString(StringBuilder builder)
-        {
-            builder.Append(this);
-        }
+        public override string ToString() => Json(null).ToString();
 
         public static implicit operator int(JsonNumber jsonNumber)
         {

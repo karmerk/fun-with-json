@@ -14,7 +14,7 @@ namespace Json
         {
             Raw = json;
         }
-
+                
         internal char Peek() => Raw[Position];
 
 
