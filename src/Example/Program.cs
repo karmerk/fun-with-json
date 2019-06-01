@@ -8,9 +8,8 @@ namespace Example
     {
         static void Main(string[] args)
         {
-
             const string str = "{ \"Hello\" : 42 }";
-            
+                        
             var obj = new JsonObject(str);
             var first = obj.Values.First();
 
