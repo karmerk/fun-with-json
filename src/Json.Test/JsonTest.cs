@@ -6,9 +6,15 @@ namespace Json.Test
     [TestClass]
     public class JsonTest
     {
+        [TestMethod]
         public void Next_Test()
         {
-            // TODO test next
+            //        "012345789 "
+            var str = "   3   8  ";
+            var json = new Json(str);
+
+            json.Next();
+            Assert.AreEqual(3, json.Position);
         }
 
 

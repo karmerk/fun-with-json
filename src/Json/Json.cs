@@ -44,6 +44,7 @@ namespace Json
 
             throw new InvalidOperationException("Json ended unexpected");
         }
+
         internal void Require(char character)
         {
             Next();
